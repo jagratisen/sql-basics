@@ -193,6 +193,7 @@ FROM order_details od
 INNER JOIN orders o ON od.order_id = o.order_id
 INNER JOIN customers c ON o.customer_id = c.customer_id;
 
+-- remaning asnwers are below this data base at the end.
 2006-02-15 21:30:53-- Sakila Sample Database Schema
 -- Version 1.0
 
@@ -47928,42 +47929,7 @@ LIMIT 5;
 
 
 -- Normalisation & CTE
- -- 1. First Normal Form (1NF):
-    --           a. Identify a table in the Sakila database that violates 1NF. Explain how you
-      --         would normalize it to achieve 1NF.
-     --  Example Table:
--- Assume a hypothetical customer_phone table:
-
-text
-Copy
-Edit
-customer_id | phone_numbers
-------------|----------------
-1           | 123456, 789012
-❌ Problem: Multiple phone numbers stored in one column — violates 1NF.
-
-✅ Solution (Normalized to 1NF):
-Create a new table with one phone number per row:
-
-text
-Copy
-Edit
-customer_id | phone_number
-------------|--------------
-1           | 123456
-1           | 789012
-This makes the data atomic, satisfying 1NF.
-
-
- -- 2. Second Normal Form (2NF):
-   --            a. Choose a table in Sakila and describe how you would determine whether it is in 2NF. 
-     --       If it violates 2NF, explain the steps to normalize it.
- -- 3. Third Normal Form (3NF):
-    --           a. Identify a table in Sakila that violates 3NF. Describe the transitive dependencies 
-      --         present and outline the steps to normalize the table to 3NF.
- -- 4. Normalization Process:
-    --           a. Take a specific table in Sakila and guide through the process of normalizing it from the initial  
-      --      unnormalized form up to at least 2NF.
+ 
  -- 5. CTE Basics:
     --            a. Write a query using a CTE to retrieve the distinct list of actor names and the number of films they 
       --          have acted in from the actor and film_actor tables.
